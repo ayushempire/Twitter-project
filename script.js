@@ -288,3 +288,10 @@ const like4 = document.getElementById("heart5");
 like4.addEventListener("click", () => {
   like4.classList.toggle("like");
 });
+
+// * logout
+const logout = document.querySelector(".logout");
+logout.addEventListener("click", () => {
+  feedPage.style.display = "none";
+  mainPage.style.display = "grid";
+});
