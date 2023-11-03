@@ -254,3 +254,10 @@ console.log(signuppageSection);
 //   mainPage.style.display = 'none';
 // signuppageSection.style.display = 'flex'
 // })
+
+// * feed home working
+const feedHome = document.querySelector("#feed-home");
+feedHome.addEventListener("click", () => {
+  feedPage.style.display = "none";
+  mainPage.style.display = "grid";
+});
