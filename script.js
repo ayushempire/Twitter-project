@@ -136,11 +136,15 @@ loginpage_login_btn.addEventListener("click", () => {
 
   if (loginpage_userinfo.value !== "" && loginpage_password.value !== "") {
     let user = luser.filter((e) => {
-      return e.uname === loginpage_userinfo.value;
+      if (e.uname === loginpage_userinfo.value) {
+        return e.uname === loginpage_userinfo.value;
+      } else {
+        loginpage_model.style.display = "block";
+      }
     });
 
     if (
-      user[0].uname !== loginpage_userinfo.value &&
+      user[0].uname !== loginpage_userinfo.value ||
       user[0].pass !== loginpage_password.value
     ) {
       loginpage_model.style.display = "block";
