@@ -263,7 +263,24 @@ feedHome.addEventListener("click", () => {
 });
 
 // * like button color change
-const like = document.querySelector("#heart");
+const like = document.getElementById("heart1");
+
 like.addEventListener("click", () => {
   like.classList.toggle("like");
+});
+const like1 = document.getElementById("heart2");
+like1.addEventListener("click", () => {
+  like1.classList.toggle("like");
+});
+const like2 = document.getElementById("heart3");
+like2.addEventListener("click", () => {
+  like2.classList.toggle("like");
+});
+const like3 = document.getElementById("heart4");
+like3.addEventListener("click", () => {
+  like3.classList.toggle("like");
+});
+const like4 = document.getElementById("heart5");
+like4.addEventListener("click", () => {
+  like4.classList.toggle("like");
 });
