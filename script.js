@@ -261,3 +261,9 @@ feedHome.addEventListener("click", () => {
   feedPage.style.display = "none";
   mainPage.style.display = "grid";
 });
+
+// * like button color change
+const like = document.querySelector("#heart");
+like.addEventListener("click", () => {
+  like.classList.toggle("like");
+});

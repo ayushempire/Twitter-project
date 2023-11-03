@@ -1758,3 +1758,10 @@ body {
   text-decoration: none;
 }
 /* completed */
+
+/* * like button  */
+.like {
+  color: red;
+}
+
+/* * end of like button  */
