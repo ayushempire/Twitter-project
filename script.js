@@ -103,14 +103,50 @@ mian_top_login_btn.addEventListener("click", (e) => {
 
 // todo : making login page login btn ative
 loginpage_login_btn.addEventListener("click", () => {
-  // *selecting log in page userinfo
-  const loginpage_userinfo = document.querySelector(".loginpage-userinfo");
+  // * getting data from local storage
+  const luser = JSON.parse(localStorage.getItem("user"));
 
+  // console.log(luser);
+
+  //  *selecting log in page userinfo
+  const loginpage_userinfo = document.querySelector(".loginpage-userinfo");
+  console.log(loginpage_userinfo.value);
   // *selecting log in page password
   const loginpage_password = document.querySelector(".loginpage-password");
+  console.log(loginpage_password.value);
+
+  // * geting login info from localhost
+  // for (let i = 0; i < luser.length; i++) {
+  //   let user;
+  //   user = luser[i];
+  //   if (user.uname === loginpage_userinfo.value) {
+  //     loginpage_model.style.display = "block";
+  //   } else {
+  //     login_to_feed();
+  //   }
+  // }
+
+  // const user = luser.filter((e) => {
+  //   return e === loginpage_userinfo.value;
+  // });
+  // console.log(user);
+
+  // if loginpage_userinfo.value !== localStorage.getItem()
+  // * end of this
 
   if (loginpage_userinfo.value !== "" && loginpage_password.value !== "") {
-    login_to_feed();
+    let user = luser.filter((e) => {
+      return e.uname === loginpage_userinfo.value;
+    });
+
+    if (
+      user[0].uname !== loginpage_userinfo.value &&
+      user[0].pass !== loginpage_password.value
+    ) {
+      loginpage_model.style.display = "block";
+    } else {
+      login_to_feed();
+    }
   } else {
     loginpage_model.style.display = "block";
   }
@@ -208,14 +244,13 @@ dark_mode.addEventListener("click", () => {
 // completed
 
 // sign up button
-const signBtn = document.querySelector('#btn-signup')
-console.log(signBtn)
+const signBtn = document.querySelector("#btn-signup");
+console.log(signBtn);
 
-const signuppageSection = document.querySelector('.signup-page-section')
-console.log(signuppageSection)
+const signuppageSection = document.querySelector(".signup-page-section");
+console.log(signuppageSection);
 
 // signBtn.addEventListener('click',() => {
 //   mainPage.style.display = 'none';
-  // signuppageSection.style.display = 'flex'
+// signuppageSection.style.display = 'flex'
 // })
-
